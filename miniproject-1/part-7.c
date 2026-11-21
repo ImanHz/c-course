@@ -87,13 +87,13 @@ int main(void) {
         continue;
       }
       if (row == 0) {
-        wprintf(COLOR_BLUE_ITALIC L"%*d%lc" COLOR_RESET, row_length, col,
+        wprintf(COLOR_BLUE_ITALIC L"%*d" COLOR_RESET "%lc", row_length, col,
                 vertical);
       } else if (col == 0) {
-        wprintf("%lc" COLOR_RED_BOLD L"%*d%lc" COLOR_RESET, vertical,
+        wprintf("%lc" COLOR_RED_BOLD L"%*d" COLOR_RESET "%lc", vertical,
                 row_length, row, vertical);
       } else {
-        wprintf(COLOR_GREEN L"%*d%lc" COLOR_RESET, row_length, row * col,
+        wprintf(COLOR_GREEN L"%*d" COLOR_RESET "%lc", row_length, row * col,
                 vertical);
       }
     }
